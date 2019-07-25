@@ -51,20 +51,20 @@ nav ul li a {
 }
 
 #one {
-    background-image: url('https://www.ericandrewluna.com/NewTek/images/header.jpg');
+    background-image: url('./images/header.jpg');
     background-size: 100% 100%;
 }
 
 #two {
-    background-image: url('../images/demo.jpg');
+    background-image: url('./images/demo.jpg');
 }
 
 #three {
-    background-image: url('../images/spark.jpg');
+    background-image: url('./images/spark.jpg');
 }
 
 #four {
-    background-image: url('../images/ptz.jpg');
+    background-image: url('./images/ptz.jpg');
 }
 
 
