@@ -194,7 +194,7 @@ html {
 .blog-title{
     margin: 0;
     padding: 15px 25px;
-    color: #fff;
+    color: #5BC0BE;
 }
 
 .blog{
@@ -208,6 +208,10 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.card h2{
+    color: #fff;
 }
 
 .card img{
@@ -261,6 +265,7 @@ html {
 	position:relative;
 	top:1px;
 }
+
 
 /* Desktop */
 
