@@ -103,6 +103,10 @@ html {
     margin: 5px;
 }
 
+.nav-bar-resize{
+    display: none;
+}
+
 /* Header and Banner */
 
 .content {
@@ -183,7 +187,7 @@ html {
 @media only screen and (min-width:770px) {
     .nav .links {
         display: inline-block;
-        font-size: 1.25em;
+        font-size: 1em;
         color: #fff;
         text-decoration: none;
         margin: 0 10px;
@@ -207,6 +211,29 @@ html {
     .nav .button,
     .sidenav, .nav-bar {
         display: none
+    }
+
+    .nav-bar-resize{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: #5BC0BE;
+    }
+    
+    .nav-bar-resize a{
+        text-decoration: none;
+        margin: 5px;
+        height: 25px;
+        align-items: center;
+        color: #000;
+    }
+    
+    .nav-bar-resize a:visited{
+        color: #000;
+    }
+
+    .nav-bar-resize a:hover{
+        color: #fff;
     }
 
     .content {
