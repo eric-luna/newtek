@@ -2,39 +2,94 @@ body,
 html {
     margin: 0;
     padding: 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Merriweather', serif;
     width: 100%;
     height: 100%;
 }
 
 /* Navigation */
-
-nav {
+.nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     width: 100%;
-    background-color: red;
+    height: 100px;
+    background-color: gray;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
+.nav .logo {
+    margin-right: auto;
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 2em;
 }
 
-nav ul li {
-    flex-basis: 100px;
+.nav .logo,
+.nav .logo:visited {
+    color: #ff3b49
 }
 
-nav ul li a {
+.nav .button {
+    border: none;
+    margin: 10px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #ff3b49;
+}
+
+.nav .links {
+    display: none
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
     text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    -webkit-transition: .3s;
+    transition: .3s
 }
 
-.logo {
-    padding: 10px;
-    height: 38px;
-    width: 150px;
+.offcanvas .sidenav a:focus,
+.sidenav a:hover {
+    color: #ff3b49
 }
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px
+}
+
 
 /* Header and Banner */
 
@@ -43,6 +98,7 @@ nav ul li a {
     grid-template-columns: 100%;
     grid-template-rows: 225px 225px 225px 225px;
     grid-gap: 10px;
+    margin-top: 5px;
 }
 
 .block {
@@ -67,12 +123,84 @@ nav ul li a {
     background-image: url('../images/ptz.jpg');
 }
 
+/* Popular Stories and Events */
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.stories {
+    display: flex;
+    flex-direction: column;
+}
+
+.story {
+    text-align: center;
+    width: 95%;
+}
+
+.story img {
+    width: 85%;
+    height: auto;
+}
+
+.story h4 {
+    justify-content: center;
+    margin: 0;
+}
+
+.story p {
+    margin: 0;
+}
+
+.events {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event {
+    display: flex;
+    width: 90%;
+    height: 250px;
+    background-color: greenyellow;
+    margin-bottom: 5px;
+}
 
 @media only screen and (min-width:770px) {
+    .nav .links {
+        display: inline-block;
+        font-size: 2em;
+        color: #000;
+        text-decoration: none;
+        margin: 0 10px;
+        -webkit-transition: all .25s;
+        transition: all .25s
+    }
+
+    .nav .links:visited {
+        color: #000
+    }
+
+    .nav .links:hover {
+        color: #ff3b49;
+        border-bottom: 1px solid #000
+    }
+
+    .nav .current-page {
+        border-bottom: 3px solid #ff3b49
+    }
+
+    .nav .button,
+    .sidenav {
+        display: none
+    }
+
     .content {
         display: grid;
         grid-template-columns: 33% 33% 33%;
-        grid-template-rows: 350px 300px;
+        grid-template-rows: 350px 200px;
     }
 
     #one {
@@ -80,4 +208,36 @@ nav ul li a {
         grid-column-end: 4;
         background-size: cover;
     }
+
+    /* Popular Stories and Events */
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .stories {
+        width: 60%;
+    }
+
+    .story {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 5px;
+    }
+
+    .story img {
+        width: 40%;
+        height: 100px;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .events {
+        width: 40%;
+    }
+
 }
